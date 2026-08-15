@@ -20,6 +20,10 @@ class AppConfig(BaseSettings):
     port: int = Field()
     api_key: SecretStr = Field()
     environment: str = Field()
+    langsmith_tracing: SecretStr = Field()
+    langsmith_endpoint: SecretStr = Field()
+    langsmith_api_key: SecretStr = Field()
+    langsmith_project: SecretStr = Field()
 
 def get_config() -> AppConfig:
     settings = AppConfig() # type: ignore
